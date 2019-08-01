@@ -1,0 +1,55 @@
+server:
+  port: 8080
+
+# ---------------------
+# app configuration
+# ---------------------
+spring:
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: <username>
+    password: <password>
+    properties:
+      mail:
+        smpt:
+          auth: true
+        starttls:
+          enable: true
+
+
+# ---------------------
+# Jackson configuration
+# ---------------------
+spring.jackson.serialization.indent_output: true
+spring.jackson.serialization.write_dates_as_timestamps: false
+
+# ---------------------------------------------
+# management endpoint configuration
+# ---------------------------------------------
+management:
+  server:
+    port: 8081
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: health,info
+    jmx:
+      exposure:
+        exclude: "*"
+
+
+#
+## logging configuration
+#
+logging:
+  file: logs/app.log
+  pattern:
+    console: "[%d] [%-5level] [%thread] [%logger] - [%msg]%n"
+    file: "[%d] [%-5level] [%thread] [%logger] - [%msg]%n"
+  level:
+    org.springframework.web: WARN
+    org.springframework.security: WARN
+    com.demo: INFO

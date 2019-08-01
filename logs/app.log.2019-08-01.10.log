@@ -1,0 +1,17 @@
+976  [main] INFO  com.demo.mustache.DemoApp - Starting DemoApp v0.0.1-SNAPSHOT on D-14173G with PID 28344 (C:\ws\0git\cjr8020\spring\sb-hello-mustache\target\sb-hello-mustache-0.0.1-SNAPSHOT.jar started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)
+1016 [main] INFO  com.demo.mustache.DemoApp - No active profile set, falling back to default profiles: default
+2766 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2810 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2813 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2926 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+3477 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+4069 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+4171 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+4174 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+4174 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+4193 [main] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+4232 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+4319 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+4325 [main] INFO  com.demo.mustache.DemoApp - Started DemoApp in 4.129 seconds (JVM running for 4.666)
+16456 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+134606 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,0 +1,411 @@
+[2019-08-01 14:57:28,303] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Starting DemoAppTests on D-14173G with PID 15936 (started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 14:57:28,306] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 14:57:29,678] [WARN ] [main] [org.springframework.web.context.support.GenericWebApplicationContext] - [Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailController': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}]
+[2019-08-01 14:57:29,697] [INFO ] [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] - [
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.]
+[2019-08-01 14:57:29,905] [ERROR] [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] - [
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field mailSender in com.demo.mustache.EmailController required a bean of type 'org.springframework.mail.javamail.JavaMailSender' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
+]
+[2019-08-01 14:57:29,909] [ERROR] [main] [org.springframework.test.context.TestContextManager] - [Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@16293aa2] to prepare test instance [com.demo.mustache.DemoAppTests@77010a30]]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailController': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 45 common frames omitted
+[2019-08-01 14:59:56,228] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Starting DemoAppTests on D-14173G with PID 29800 (started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 14:59:56,231] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 14:59:58,790] [INFO ] [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Initializing ExecutorService 'applicationTaskExecutor']
+[2019-08-01 14:59:59,799] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Started DemoAppTests in 4.225 seconds (JVM running for 5.371)]
+[2019-08-01 15:00:00,145] [INFO ] [Thread-2] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Shutting down ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:10:12,203] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Starting DemoAppTests on D-14173G with PID 4660 (started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 15:10:12,206] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 15:10:13,649] [WARN ] [main] [org.springframework.web.context.support.GenericWebApplicationContext] - [Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailController': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}]
+[2019-08-01 15:10:13,666] [INFO ] [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] - [
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.]
+[2019-08-01 15:10:13,891] [ERROR] [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] - [
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field mailSender in com.demo.mustache.EmailController required a bean of type 'org.springframework.mail.javamail.JavaMailSender' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
+]
+[2019-08-01 15:10:13,895] [ERROR] [main] [org.springframework.test.context.TestContextManager] - [Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@16293aa2] to prepare test instance [com.demo.mustache.DemoAppTests@6de0f580]]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailController': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 45 common frames omitted
+[2019-08-01 15:17:30,237] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Starting DemoAppTests on D-14173G with PID 14020 (started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 15:17:30,239] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 15:17:31,679] [WARN ] [main] [org.springframework.web.context.support.GenericWebApplicationContext] - [Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailController': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}]
+[2019-08-01 15:17:31,700] [INFO ] [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] - [
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.]
+[2019-08-01 15:17:31,948] [ERROR] [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] - [
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field mailSender in com.demo.mustache.EmailController required a bean of type 'org.springframework.mail.javamail.JavaMailSender' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
+]
+[2019-08-01 15:17:31,954] [ERROR] [main] [org.springframework.test.context.TestContextManager] - [Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@16293aa2] to prepare test instance [com.demo.mustache.DemoAppTests@5782d777]]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailController': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 45 common frames omitted
+[2019-08-01 15:18:24,848] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Starting DemoAppTests on D-14173G with PID 27964 (started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 15:18:24,849] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 15:18:27,250] [INFO ] [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Initializing ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:18:28,297] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Started DemoAppTests in 4.089 seconds (JVM running for 5.223)]
+[2019-08-01 15:18:28,613] [INFO ] [Thread-2] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Shutting down ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:19:37,683] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Starting DemoAppTests on D-14173G with PID 15048 (started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 15:19:37,685] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 15:19:40,062] [INFO ] [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Initializing ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:19:41,100] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Started DemoAppTests in 4.049 seconds (JVM running for 5.145)]
+[2019-08-01 15:19:41,431] [INFO ] [Thread-2] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Shutting down ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:19:58,127] [INFO ] [main] [com.demo.mustache.DemoApp] - [Starting DemoApp v0.0.1-SNAPSHOT on D-14173G with PID 11220 (C:\ws\0git\cjr8020\spring\sb-hello-mustache\target\sb-hello-mustache-0.0.1-SNAPSHOT.jar started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 15:19:58,134] [INFO ] [main] [com.demo.mustache.DemoApp] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 15:19:59,955] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat initialized with port(s): 8080 (http)]
+[2019-08-01 15:20:00,003] [INFO ] [main] [org.apache.catalina.core.StandardService] - [Starting service [Tomcat]]
+[2019-08-01 15:20:00,005] [INFO ] [main] [org.apache.catalina.core.StandardEngine] - [Starting Servlet engine: [Apache Tomcat/9.0.21]]
+[2019-08-01 15:20:00,138] [INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - [Initializing Spring embedded WebApplicationContext]
+[2019-08-01 15:20:00,699] [INFO ] [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Initializing ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:20:01,333] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat started on port(s): 8080 (http) with context path '']
+[2019-08-01 15:20:01,437] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat initialized with port(s): 8081 (http)]
+[2019-08-01 15:20:01,439] [INFO ] [main] [org.apache.catalina.core.StandardService] - [Starting service [Tomcat]]
+[2019-08-01 15:20:01,440] [INFO ] [main] [org.apache.catalina.core.StandardEngine] - [Starting Servlet engine: [Apache Tomcat/9.0.21]]
+[2019-08-01 15:20:01,455] [INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/]] - [Initializing Spring embedded WebApplicationContext]
+[2019-08-01 15:20:01,499] [INFO ] [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] - [Exposing 2 endpoint(s) beneath base path '/actuator']
+[2019-08-01 15:20:01,587] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat started on port(s): 8081 (http) with context path '']
+[2019-08-01 15:20:01,592] [INFO ] [main] [com.demo.mustache.DemoApp] - [Started DemoApp in 4.171 seconds (JVM running for 4.715)]
+[2019-08-01 15:20:42,385] [INFO ] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - [Initializing Spring DispatcherServlet 'dispatcherServlet']
+[2019-08-01 15:21:57,979] [ERROR] [http-nio-8080-exec-5] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] - [Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.github.mustachejava.MustacheNotFoundException: Template email.mustache not found] with root cause]
+com.github.mustachejava.MustacheNotFoundException: Template email.mustache not found
+	at com.github.mustachejava.DefaultMustacheFactory.getReader(DefaultMustacheFactory.java:120)
+	at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:26)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:179)
+	at com.demo.mustache.EmailController.sendEmail(EmailController.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[2019-08-01 15:26:01,458] [INFO ] [Thread-4] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Shutting down ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:27:20,869] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Starting DemoAppTests on D-14173G with PID 10112 (started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 15:27:20,871] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 15:27:23,481] [INFO ] [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Initializing ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:27:24,534] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Started DemoAppTests in 4.281 seconds (JVM running for 5.497)]
+[2019-08-01 15:27:24,868] [INFO ] [Thread-2] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Shutting down ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:28:01,425] [INFO ] [main] [com.demo.mustache.DemoApp] - [Starting DemoApp v0.0.1-SNAPSHOT on D-14173G with PID 10516 (C:\ws\0git\cjr8020\spring\sb-hello-mustache\target\sb-hello-mustache-0.0.1-SNAPSHOT.jar started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 15:28:01,431] [INFO ] [main] [com.demo.mustache.DemoApp] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 15:28:03,455] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat initialized with port(s): 8080 (http)]
+[2019-08-01 15:28:03,501] [INFO ] [main] [org.apache.catalina.core.StandardService] - [Starting service [Tomcat]]
+[2019-08-01 15:28:03,503] [INFO ] [main] [org.apache.catalina.core.StandardEngine] - [Starting Servlet engine: [Apache Tomcat/9.0.21]]
+[2019-08-01 15:28:03,620] [INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - [Initializing Spring embedded WebApplicationContext]
+[2019-08-01 15:28:04,183] [INFO ] [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Initializing ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:28:04,782] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat started on port(s): 8080 (http) with context path '']
+[2019-08-01 15:28:04,884] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat initialized with port(s): 8081 (http)]
+[2019-08-01 15:28:04,886] [INFO ] [main] [org.apache.catalina.core.StandardService] - [Starting service [Tomcat]]
+[2019-08-01 15:28:04,887] [INFO ] [main] [org.apache.catalina.core.StandardEngine] - [Starting Servlet engine: [Apache Tomcat/9.0.21]]
+[2019-08-01 15:28:04,902] [INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/]] - [Initializing Spring embedded WebApplicationContext]
+[2019-08-01 15:28:04,940] [INFO ] [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] - [Exposing 2 endpoint(s) beneath base path '/actuator']
+[2019-08-01 15:28:05,035] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat started on port(s): 8081 (http) with context path '']
+[2019-08-01 15:28:05,040] [INFO ] [main] [com.demo.mustache.DemoApp] - [Started DemoApp in 4.338 seconds (JVM running for 4.887)]
+[2019-08-01 15:28:21,365] [INFO ] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - [Initializing Spring DispatcherServlet 'dispatcherServlet']
+[2019-08-01 15:36:09,713] [INFO ] [Thread-4] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Shutting down ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:36:21,559] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Starting DemoAppTests on D-14173G with PID 9264 (started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 15:36:21,561] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 15:36:24,032] [INFO ] [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Initializing ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:36:25,039] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Started DemoAppTests in 4.093 seconds (JVM running for 5.213)]
+[2019-08-01 15:36:25,369] [INFO ] [Thread-2] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Shutting down ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:36:35,715] [INFO ] [main] [com.demo.mustache.DemoApp] - [Starting DemoApp v0.0.1-SNAPSHOT on D-14173G with PID 28344 (C:\ws\0git\cjr8020\spring\sb-hello-mustache\target\sb-hello-mustache-0.0.1-SNAPSHOT.jar started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 15:36:35,755] [INFO ] [main] [com.demo.mustache.DemoApp] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 15:36:37,505] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat initialized with port(s): 8080 (http)]
+[2019-08-01 15:36:37,549] [INFO ] [main] [org.apache.catalina.core.StandardService] - [Starting service [Tomcat]]
+[2019-08-01 15:36:37,552] [INFO ] [main] [org.apache.catalina.core.StandardEngine] - [Starting Servlet engine: [Apache Tomcat/9.0.21]]
+[2019-08-01 15:36:37,665] [INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - [Initializing Spring embedded WebApplicationContext]
+[2019-08-01 15:36:38,216] [INFO ] [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Initializing ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:36:38,808] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat started on port(s): 8080 (http) with context path '']
+[2019-08-01 15:36:38,910] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat initialized with port(s): 8081 (http)]
+[2019-08-01 15:36:38,913] [INFO ] [main] [org.apache.catalina.core.StandardService] - [Starting service [Tomcat]]
+[2019-08-01 15:36:38,913] [INFO ] [main] [org.apache.catalina.core.StandardEngine] - [Starting Servlet engine: [Apache Tomcat/9.0.21]]
+[2019-08-01 15:36:38,932] [INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/]] - [Initializing Spring embedded WebApplicationContext]
+[2019-08-01 15:36:38,971] [INFO ] [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] - [Exposing 2 endpoint(s) beneath base path '/actuator']
+[2019-08-01 15:36:39,058] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat started on port(s): 8081 (http) with context path '']
+[2019-08-01 15:36:39,064] [INFO ] [main] [com.demo.mustache.DemoApp] - [Started DemoApp in 4.129 seconds (JVM running for 4.666)]
+[2019-08-01 15:36:51,195] [INFO ] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - [Initializing Spring DispatcherServlet 'dispatcherServlet']
+[2019-08-01 15:38:49,345] [INFO ] [Thread-4] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Shutting down ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:41:31,122] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Starting DemoAppTests on D-14173G with PID 18848 (started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 15:41:31,125] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 15:41:33,407] [INFO ] [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Initializing ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:41:34,492] [INFO ] [main] [com.demo.mustache.DemoAppTests] - [Started DemoAppTests in 3.988 seconds (JVM running for 5.255)]
+[2019-08-01 15:41:34,765] [INFO ] [Thread-2] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Shutting down ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:42:05,081] [INFO ] [main] [com.demo.mustache.DemoApp] - [Starting DemoApp v0.0.1-SNAPSHOT on D-14173G with PID 13328 (C:\ws\0git\cjr8020\spring\sb-hello-mustache\target\sb-hello-mustache-0.0.1-SNAPSHOT.jar started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)]
+[2019-08-01 15:42:05,089] [INFO ] [main] [com.demo.mustache.DemoApp] - [No active profile set, falling back to default profiles: default]
+[2019-08-01 15:42:07,000] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat initialized with port(s): 8080 (http)]
+[2019-08-01 15:42:07,053] [INFO ] [main] [org.apache.catalina.core.StandardService] - [Starting service [Tomcat]]
+[2019-08-01 15:42:07,057] [INFO ] [main] [org.apache.catalina.core.StandardEngine] - [Starting Servlet engine: [Apache Tomcat/9.0.21]]
+[2019-08-01 15:42:07,187] [INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - [Initializing Spring embedded WebApplicationContext]
+[2019-08-01 15:42:07,787] [INFO ] [main] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Initializing ExecutorService 'applicationTaskExecutor']
+[2019-08-01 15:42:08,382] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat started on port(s): 8080 (http) with context path '']
+[2019-08-01 15:42:08,483] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat initialized with port(s): 8081 (http)]
+[2019-08-01 15:42:08,485] [INFO ] [main] [org.apache.catalina.core.StandardService] - [Starting service [Tomcat]]
+[2019-08-01 15:42:08,486] [INFO ] [main] [org.apache.catalina.core.StandardEngine] - [Starting Servlet engine: [Apache Tomcat/9.0.21]]
+[2019-08-01 15:42:08,501] [INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/]] - [Initializing Spring embedded WebApplicationContext]
+[2019-08-01 15:42:08,538] [INFO ] [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] - [Exposing 2 endpoint(s) beneath base path '/actuator']
+[2019-08-01 15:42:08,625] [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - [Tomcat started on port(s): 8081 (http) with context path '']
+[2019-08-01 15:42:08,630] [INFO ] [main] [com.demo.mustache.DemoApp] - [Started DemoApp in 4.391 seconds (JVM running for 4.945)]
+[2019-08-01 15:42:12,362] [INFO ] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - [Initializing Spring DispatcherServlet 'dispatcherServlet']
+[2019-08-01 15:43:36,759] [INFO ] [Thread-4] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] - [Shutting down ExecutorService 'applicationTaskExecutor']
