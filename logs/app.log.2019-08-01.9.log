@@ -1,5 +1,0 @@
-1261 [main] INFO  com.demo.mustache.DemoAppTests - Starting DemoAppTests on D-14173G with PID 9264 (started by craiskin in C:\ws\0git\cjr8020\spring\sb-hello-mustache)
-1263 [main] INFO  com.demo.mustache.DemoAppTests - No active profile set, falling back to default profiles: default
-3734 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-4741 [main] INFO  com.demo.mustache.DemoAppTests - Started DemoAppTests in 4.093 seconds (JVM running for 5.213)
-5071 [Thread-2] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
