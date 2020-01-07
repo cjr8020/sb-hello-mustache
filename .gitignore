@@ -38,7 +38,7 @@ build/
 *.moved
 *.err
 *.orig
-#*.log
+*.log
 *.rej
 *.swo
 *.swp
